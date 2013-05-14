@@ -4,4 +4,13 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>BeerSelectServlet</servlet-name>
+  	<servlet-class>com.example.chapter2.servlet.BeerSelect</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>BeerSelectServlet</servlet-name>
+  	<url-pattern>/SelectionBeer.do</url-pattern>
+  </servlet-mapping>
 </web-app>
