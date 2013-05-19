@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class InipParamAttributeReaderServlet extends HttpServlet{
 
+	private static final String BR = "<br/>";
 	private static final long serialVersionUID = 1L;
 	
 	@Override
@@ -19,19 +20,17 @@ public class InipParamAttributeReaderServlet extends HttpServlet{
 		PrintWriter responseWriter = response.getWriter();
 		
 		responseWriter.println("Servlet init parameters: <br/>");
-		@SuppressWarnings("unchecked")
 		Enumeration<String> servletInitParams = (Enumeration<String>)getServletConfig().getInitParameterNames();
 		while (servletInitParams.hasMoreElements()) {
 			String paramName = servletInitParams.nextElement();
-			responseWriter.println("Parameter Name: " + paramName + " Parameter Value: " + getServletConfig().getInitParameter(paramName) + "<br/>");
+			responseWriter.println("Parameter Name: " + paramName + " Parameter Value: " + getServletConfig().getInitParameter(paramName) + BR);
 		}
 		
 		responseWriter.println("Servlet context init parameters: <br/>");
-		@SuppressWarnings("unchecked")
 		Enumeration<String> servletContextInitParams = (Enumeration<String>)getServletContext().getInitParameterNames();
 		while(servletContextInitParams.hasMoreElements()) {
 			String contextParamName = servletContextInitParams.nextElement();
-			responseWriter.println("Context Parameter Name: " + contextParamName + " Parameter Value: " + getServletContext().getInitParameter(contextParamName) + "<br/>");
+			responseWriter.println("Context Parameter Name: " + contextParamName + " Parameter Value: " + getServletContext().getInitParameter(contextParamName) + BR);
 		}
 		
 /*		responseWriter.println("Application attributes: <br/>");
@@ -44,9 +43,14 @@ public class InipParamAttributeReaderServlet extends HttpServlet{
 		
 		responseWriter.println("Extract Application Attribute DB JNDI Name <br/>");
 		ContextAttributeObject dbNameObject = (ContextAttributeObject) getServletContext().getAttribute("dbJNDIObject");
-		responseWriter.println("Connection Name: " + dbNameObject.getParamName() + " Connection Value: " + dbNameObject.getParamValue() + "<br/>");
+		responseWriter.println("Connection Name: " + dbNameObject.getParamName() + " Connection Value: " + dbNameObject.getParamValue() + BR);
 		
-		
+		responseWriter.println("Servlet Context path from ServletContext: " + getServletContext().getContextPath() + BR);
+		responseWriter.println("Servlet Context path from ServletRequest: " + request.getContextPath() + BR);
+		responseWriter.println("Request URI from ServletRequest: " + request.getRequestURI() + BR);
+		responseWriter.println("Remote Address from ServletRequest: " + request.getRemoteAddr() + BR);
+		responseWriter.println("Remote Host from ServletRequest: " + request.getRemoteHost() + BR);
+		responseWriter.println("Remote Port from ServletRequest: " + request.getRemotePort() + BR);
 
 	}
 	

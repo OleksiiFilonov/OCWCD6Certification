@@ -18,7 +18,7 @@ public class ExampleServletContextListener implements ServletContextListener{
 	}
 
 	public void contextDestroyed(ServletContextEvent sce) {
-		Logger.getGlobal().log(Level.INFO, "context destroyed");
+		Logger.getGlobal().log(Level.INFO, "Application context has been destroyed");
 	}
 
 }

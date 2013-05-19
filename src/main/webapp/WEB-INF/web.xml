@@ -29,6 +29,42 @@
   	<url-pattern>/initParametersAttributes.do</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>Session Attribute Test Servlet</servlet-name>
+  	<servlet-class>com.example.chapter5.PutToSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Session Attribute Test Servlet</servlet-name>
+  	<url-pattern>/putToSession</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Illegal State Exception</servlet-name>
+  	<servlet-class>com.example.chapter5.IllegalStateExceptionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Illegal State Exception</servlet-name>
+  	<url-pattern>/illegalStateExceptionServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Dispatcher Servlet</servlet-name>
+  	<servlet-class>com.example.chapter5.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Dispatcher Servlet</servlet-name>
+  	<url-pattern>/dispatcherServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Second Dispatcher Servlet</servlet-name>
+  	<servlet-class>com.example.chapter5.SecondDispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Second Dispatcher Servlet</servlet-name>
+  	<url-pattern>/secondDispatcherServlet.do</url-pattern>
+  </servlet-mapping>  
+  
   <context-param>
   	<param-name>some Init Context Param Name</param-name>
   	<param-value>some Init Context Param Value</param-value>
@@ -38,6 +74,10 @@
   	<param-value>Database JNDI Value</param-value>
   </context-param>
   
+  <listener>
+  	<listener-class>com.example.chapter5.LogSessionListener</listener-class>
+  </listener>
+
   <listener>
   	<listener-class>com.example.chapter5.ExampleServletContextListener</listener-class>
   </listener>

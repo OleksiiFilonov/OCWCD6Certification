@@ -1,0 +1,14 @@
+<html>
+	<body>
+		<h1>Dispatcher Page</h1>
+		<form method="post" action="dispatcherServlet.do?someParameter=someValue">
+			<select name="dispatchParameter" size="1">
+				<option value="requestDispatcher">request dispatcher</option>
+				<option value="servletContextDispatcher">servlet context dispatcher</option>
+				<option value="servletForward">servlet forward dispatcher</option>
+				<option value="manyForwardDispatcher">many forward dispatcher</option>
+			</select>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>
