@@ -1,16 +1,44 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
   	<servlet-name>BeerSelectServlet</servlet-name>
   	<servlet-class>com.example.chapter2.servlet.BeerSelect</servlet-class>
   </servlet>
-  
   <servlet-mapping>
   	<servlet-name>BeerSelectServlet</servlet-name>
   	<url-pattern>/SelectionBeer.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>Init Param Attributes Servlet</servlet-name>
+  	<servlet-class>com.example.chapter5.InipParamAttributeReaderServlet</servlet-class>
+  	<init-param>
+  		<param-name>some Init Servlet Param Name</param-name>
+  		<param-value>some Init Servlet Param Value</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>trulala Name</param-name>
+  		<param-value>trulala Value</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Init Param Attributes Servlet</servlet-name>
+  	<url-pattern>/initParametersAttributes.do</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>some Init Context Param Name</param-name>
+  	<param-value>some Init Context Param Value</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>dbJNDIName</param-name>
+  	<param-value>Database JNDI Value</param-value>
+  </context-param>
+  
+  <listener>
+  	<listener-class>com.example.chapter5.ExampleServletContextListener</listener-class>
+  </listener>
 </web-app>
