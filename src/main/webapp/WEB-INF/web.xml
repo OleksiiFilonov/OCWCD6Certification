@@ -4,6 +4,39 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
   <display-name>Archetype Created Web Application</display-name>
+  
+  <session-config>
+  	<session-timeout>1</session-timeout>
+  </session-config>
+  
+  <servlet>
+  	<servlet-name>MakeImmortalSessionServlet</servlet-name>
+  	<servlet-class>com.example.chapter6.MakeImmortalSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MakeImmortalSessionServlet</servlet-name>
+  	<url-pattern>/makeImmortalSession.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>InvalidateSessionServlet</servlet-name>
+  	<servlet-class>com.example.chapter6.InvalidateSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InvalidateSessionServlet</servlet-name>
+  	<url-pattern>/invalidateSession.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>Session Existence Servlet</servlet-name>
+  	<servlet-class>com.example.chapter6.SessionExistenceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Session Existence Servlet</servlet-name>
+  	<url-pattern>/sessionExistence.do</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
   	<servlet-name>BeerSelectServlet</servlet-name>
   	<servlet-class>com.example.chapter2.servlet.BeerSelect</servlet-class>
@@ -35,7 +68,7 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>Session Attribute Test Servlet</servlet-name>
-  	<url-pattern>/putToSession</url-pattern>
+  	<url-pattern>/putToSession.do</url-pattern>
   </servlet-mapping>
   
   <servlet>
