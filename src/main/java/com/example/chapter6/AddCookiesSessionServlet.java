@@ -3,13 +3,13 @@ package com.example.chapter6;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class InvalidateSessionServlet extends HttpServlet{
-	
+public class AddCookiesSessionServlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -17,11 +17,11 @@ public class InvalidateSessionServlet extends HttpServlet{
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println("<html><body>");
-		HttpSession session = request.getSession();
-		session.invalidate();
-		session.getAttribute("Should Throw Illegal State Exception Exception");
-		out.println("Session has been invalidated!");
+		Cookie changedDefaultCookie = new Cookie("ChangedDefaultCookieName", "Changed Cookie Value");
+		Cookie changedInterval30Cookie = new Cookie("changedInterval30Cookie", "Interval set to 30 seconds");
+		changedInterval30Cookie.setMaxAge(60);
+		response.addCookie(changedDefaultCookie);
+		response.addCookie(changedInterval30Cookie);
 		out.println("</html></body>");
 	}
-
 }

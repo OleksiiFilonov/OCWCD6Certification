@@ -10,12 +10,40 @@
   </session-config>
   
   <servlet>
+  	<servlet-name>AddCookiesSessionServlet</servlet-name>
+  	<servlet-class>com.example.chapter6.AddCookiesSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddCookiesSessionServlet</servlet-name>
+  	<url-pattern>/addCookiesSession.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChangeCookiesSessionServlet</servlet-name>
+  	<servlet-class>com.example.chapter6.ChangeCookiesSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangeCookiesSessionServlet</servlet-name>
+  	<url-pattern>/changeCookiesSession.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
   	<servlet-name>MakeImmortalSessionServlet</servlet-name>
   	<servlet-class>com.example.chapter6.MakeImmortalSessionServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>MakeImmortalSessionServlet</servlet-name>
   	<url-pattern>/makeImmortalSession.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>SetMaxIntervalToZeroSessionServlet</servlet-name>
+  	<servlet-class>com.example.chapter6.SetMaxIntervalToZeroSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SetMaxIntervalToZeroSessionServlet</servlet-name>
+  	<url-pattern>/setMaxIntervalToZeroSession.do</url-pattern>
   </servlet-mapping>
   
   <servlet>

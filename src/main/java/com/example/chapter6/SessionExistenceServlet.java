@@ -3,6 +3,7 @@ package com.example.chapter6;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,7 +31,16 @@ public class SessionExistenceServlet extends HttpServlet{
 		} else {
 			out.println("This is an excisted session");
 		}
-		out.println("<a href=\"" + response.encodeURL("form.html") + "\">click me</a>");
+		out.println("<a href=\"" + response.encodeURL("form.html") + "\">click me</a> </br>");
+		out.println("Session information" + "</br>");
+		out.println("Creation time: " + session.getCreationTime() + "</br>");
+		out.println("Last Accessed Time: " + session.getLastAccessedTime() + "</br>");
+		out.println("Max inactive interval: " + session.getMaxInactiveInterval() + "</br>");
+		out.println("Cookies" + "</br>");
+		Cookie [] cookies = request.getCookies();
+		for (Cookie cookie : cookies) {
+			out.println(cookie.getName() + ":" + cookie.getValue() + ":" + cookie.getMaxAge() +  "</br>");
+		}
 		out.println("</html></body>");
 	}
 
