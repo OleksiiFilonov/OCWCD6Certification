@@ -1,20 +1,38 @@
 package com.example.chapter5;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSessionActivationListener;
 import javax.servlet.http.HttpSessionBindingEvent;
 import javax.servlet.http.HttpSessionBindingListener;
+import javax.servlet.http.HttpSessionEvent;
 
-public class SessionObjectExample implements HttpSessionBindingListener {
+public class SessionObjectExample implements HttpSessionBindingListener, HttpSessionActivationListener {
 
-	public void valueBound(HttpSessionBindingEvent arg0) {
-		Logger.getGlobal().log(Level.INFO, "SessionObjectExample has been placed to session");
-	}
+    private static Logger logger = Logger.getLogger(SessionObjectExample.class.getName());
 
-	public void valueUnbound(HttpSessionBindingEvent arg0) {
-		Logger.getGlobal().log(Level.INFO, "SessionObjectExample has been removed from session");
-	}
+    static {
+        logger.setUseParentHandlers(true);
+    }
 
+    @Override
+    public void valueBound(final HttpSessionBindingEvent sessionBindingEvent) {
+        logger.info("SessionObjectExample has been placed to session");
+    }
+
+    @Override
+    public void valueUnbound(final HttpSessionBindingEvent sessionBindingEvent) {
+        logger.info("SessionObjectExample has been removed from session");
+    }
+
+    @Override
+    public void sessionDidActivate(final HttpSessionEvent sessionEvent) {
+        logger.info("SessionObjectExample did activate");
+    }
+
+    @Override
+    public void sessionWillPassivate(final HttpSessionEvent sessionEvent) {
+        logger.info("SessionObjectExample will passivate");
+    }
 
 }

@@ -1,145 +1,164 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
-  <display-name>Archetype Created Web Application</display-name>
-  
-  <session-config>
-  	<session-timeout>1</session-timeout>
-  </session-config>
-  
-  <servlet>
-  	<servlet-name>AddCookiesSessionServlet</servlet-name>
-  	<servlet-class>com.example.chapter6.AddCookiesSessionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>AddCookiesSessionServlet</servlet-name>
-  	<url-pattern>/addCookiesSession.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>ChangeCookiesSessionServlet</servlet-name>
-  	<servlet-class>com.example.chapter6.ChangeCookiesSessionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ChangeCookiesSessionServlet</servlet-name>
-  	<url-pattern>/changeCookiesSession.do</url-pattern>
-  </servlet-mapping>
-  
-  
-  <servlet>
-  	<servlet-name>MakeImmortalSessionServlet</servlet-name>
-  	<servlet-class>com.example.chapter6.MakeImmortalSessionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>MakeImmortalSessionServlet</servlet-name>
-  	<url-pattern>/makeImmortalSession.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>SetMaxIntervalToZeroSessionServlet</servlet-name>
-  	<servlet-class>com.example.chapter6.SetMaxIntervalToZeroSessionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>SetMaxIntervalToZeroSessionServlet</servlet-name>
-  	<url-pattern>/setMaxIntervalToZeroSession.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>InvalidateSessionServlet</servlet-name>
-  	<servlet-class>com.example.chapter6.InvalidateSessionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>InvalidateSessionServlet</servlet-name>
-  	<url-pattern>/invalidateSession.do</url-pattern>
-  </servlet-mapping>
-  
-  
-  <servlet>
-  	<servlet-name>Session Existence Servlet</servlet-name>
-  	<servlet-class>com.example.chapter6.SessionExistenceServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Session Existence Servlet</servlet-name>
-  	<url-pattern>/sessionExistence.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>BeerSelectServlet</servlet-name>
-  	<servlet-class>com.example.chapter2.servlet.BeerSelect</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>BeerSelectServlet</servlet-name>
-  	<url-pattern>/SelectionBeer.do</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>Init Param Attributes Servlet</servlet-name>
-  	<servlet-class>com.example.chapter5.InipParamAttributeReaderServlet</servlet-class>
-  	<init-param>
-  		<param-name>some Init Servlet Param Name</param-name>
-  		<param-value>some Init Servlet Param Value</param-value>
-  	</init-param>
-  	<init-param>
-  		<param-name>trulala Name</param-name>
-  		<param-value>trulala Value</param-value>
-  	</init-param>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Init Param Attributes Servlet</servlet-name>
-  	<url-pattern>/initParametersAttributes.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>Session Attribute Test Servlet</servlet-name>
-  	<servlet-class>com.example.chapter5.PutToSessionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Session Attribute Test Servlet</servlet-name>
-  	<url-pattern>/putToSession.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>Illegal State Exception</servlet-name>
-  	<servlet-class>com.example.chapter5.IllegalStateExceptionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Illegal State Exception</servlet-name>
-  	<url-pattern>/illegalStateExceptionServlet</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>Dispatcher Servlet</servlet-name>
-  	<servlet-class>com.example.chapter5.DispatcherServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Dispatcher Servlet</servlet-name>
-  	<url-pattern>/dispatcherServlet.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>Second Dispatcher Servlet</servlet-name>
-  	<servlet-class>com.example.chapter5.SecondDispatcherServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Second Dispatcher Servlet</servlet-name>
-  	<url-pattern>/secondDispatcherServlet.do</url-pattern>
-  </servlet-mapping>  
-  
-  <context-param>
-  	<param-name>some Init Context Param Name</param-name>
-  	<param-value>some Init Context Param Value</param-value>
-  </context-param>
-  <context-param>
-  	<param-name>dbJNDIName</param-name>
-  	<param-value>Database JNDI Value</param-value>
-  </context-param>
-  
-  <listener>
-  	<listener-class>com.example.chapter5.LogSessionListener</listener-class>
-  </listener>
+	<display-name>Archetype Created Web Application</display-name>
 
-  <listener>
-  	<listener-class>com.example.chapter5.ExampleServletContextListener</listener-class>
-  </listener>
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+
+	<servlet>
+		<servlet-name>AddCookiesSessionServlet</servlet-name>
+		<servlet-class>com.example.chapter6.AddCookiesSessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCookiesSessionServlet</servlet-name>
+		<url-pattern>/addCookiesSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReplaceCookiesSessionServlet</servlet-name>
+		<servlet-class>com.example.chapter6.ReplaceCookiesSessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReplaceCookiesSessionServlet</servlet-name>
+		<url-pattern>/replaceCookiesSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RemoveCookiesSessionServlet</servlet-name>
+		<servlet-class>com.example.chapter6.RemoveCookiesSessionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RemoveCookiesSessionServlet</servlet-name>
+		<url-pattern>/removeCookiesSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangeCookiesSessionServlet</servlet-name>
+		<servlet-class>com.example.chapter6.ChangeCookiesSessionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangeCookiesSessionServlet</servlet-name>
+		<url-pattern>/changeCookiesSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MakeImmortalSessionServlet</servlet-name>
+		<servlet-class>com.example.chapter6.MakeImmortalSessionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MakeImmortalSessionServlet</servlet-name>
+		<url-pattern>/makeImmortalSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InvalidateSessionServlet</servlet-name>
+		<servlet-class>com.example.chapter6.InvalidateSessionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InvalidateSessionServlet</servlet-name>
+		<url-pattern>/invalidateSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Session Existence Servlet</servlet-name>
+		<servlet-class>com.example.chapter6.SessionExistenceServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Session Existence Servlet</servlet-name>
+		<url-pattern>/sessionExistence.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BeerSelectServlet</servlet-name>
+		<servlet-class>com.example.chapter2.servlet.BeerSelect</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BeerSelectServlet</servlet-name>
+		<url-pattern>/SelectionBeer.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Init Param Attributes Servlet</servlet-name>
+		<servlet-class>com.example.chapter5.InipParamAttributeReaderServlet
+		</servlet-class>
+		<init-param>
+			<param-name>some Init Servlet Param Name</param-name>
+			<param-value>some Init Servlet Param Value</param-value>
+		</init-param>
+		<init-param>
+			<param-name>trulala Name</param-name>
+			<param-value>trulala Value</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Init Param Attributes Servlet</servlet-name>
+		<url-pattern>/initParametersAttributes.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Session Attribute Test Servlet</servlet-name>
+		<servlet-class>com.example.chapter5.PutToSessionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Session Attribute Test Servlet</servlet-name>
+		<url-pattern>/putToSession.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Illegal State Exception</servlet-name>
+		<servlet-class>com.example.chapter5.IllegalStateExceptionServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Illegal State Exception</servlet-name>
+		<url-pattern>/illegalStateExceptionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Dispatcher Servlet</servlet-name>
+		<servlet-class>com.example.chapter5.DispatcherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dispatcher Servlet</servlet-name>
+		<url-pattern>/dispatcherServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Second Dispatcher Servlet</servlet-name>
+		<servlet-class>com.example.chapter5.SecondDispatcherServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Second Dispatcher Servlet</servlet-name>
+		<url-pattern>/secondDispatcherServlet.do</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>some Init Context Param Name</param-name>
+		<param-value>some Init Context Param Value</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbJNDIName</param-name>
+		<param-value>Database JNDI Value</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>com.example.chapter5.LogSessionListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.example.chapter5.ExampleServletContextListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.example.chapter6.ExampleHttpSessionAttributeListener</listener-class>
+	</listener>
 </web-app>
