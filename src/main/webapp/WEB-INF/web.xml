@@ -161,4 +161,42 @@
 	<listener>
 		<listener-class>com.example.chapter6.ExampleHttpSessionAttributeListener</listener-class>
 	</listener>
+	
+	<!-- Chapter 7 -->
+	<servlet>
+		<servlet-class>com.example.chapter7.AddParametersToJSPServlet</servlet-class>
+		<servlet-name>AddParametersToJSPServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddParametersToJSPServlet</servlet-name>
+		<url-pattern>/chapter7/addParametersToJSP.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DisplayAttributesJSP</servlet-name>
+		<jsp-file>/chapter7jsp/displayAttributes.jsp</jsp-file>
+		<init-param>
+			<param-name>jspConfigParameter</param-name>
+			<param-value>JSP Servlet Config Parameter</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayAttributesJSP</servlet-name>
+		<url-pattern>/chapter7jsp/displayAttributes.do</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+		<param-name>jspContextParam</param-name>
+		<param-value>JSP Application Context Parameter</param-value>
+	</context-param>
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>/chapter7jsp/ELIgnored/*</url-pattern>
+			<scripting-invalid>true</scripting-invalid>
+		</jsp-property-group>
+		<jsp-property-group>
+			<url-pattern>/chapter7jsp/ELIgnored/*</url-pattern>
+			<el-ignored>true</el-ignored>
+		</jsp-property-group>
+	</jsp-config>
 </web-app>

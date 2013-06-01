@@ -7,10 +7,12 @@
 
 <%! public void jspInit() {
 	logger.info("accessStaticImport JSP is loaded");
+	logger.info(getServletContext().getInitParameter("dbJNDIName"));
 } %>
 
 <%! public void jspDestroy() {
 	logger.info("accessStaticImport JSP is unloaded");
+	logger.info(getServletContext().getInitParameter("dbJNDIName"));
 } %>
 <html>
 	<body>
