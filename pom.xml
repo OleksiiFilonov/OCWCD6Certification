@@ -4,9 +4,8 @@
 	<groupId>test.certification</groupId>
 	<artifactId>chapter2</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>chapter2 Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<version>0.0.1</version>
+	<name>OCWCD examples</name>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>

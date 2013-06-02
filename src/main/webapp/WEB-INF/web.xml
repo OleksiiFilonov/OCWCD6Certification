@@ -199,4 +199,14 @@
 			<el-ignored>true</el-ignored>
 		</jsp-property-group>
 	</jsp-config>
+	
+	<!-- Chapter 8 -->
+	<servlet>
+	   <servlet-name>PutBeanToRequestServlet</servlet-name>
+	   <servlet-class>com.example.chapter8.PutBeanToRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>PutBeanToRequestServlet</servlet-name>
+	   <url-pattern>/chapter8/putBeanToRequest.do</url-pattern>
+	</servlet-mapping>
 </web-app>
