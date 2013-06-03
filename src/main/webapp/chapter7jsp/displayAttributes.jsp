@@ -41,7 +41,7 @@
 		<tbody>
 			<tr>
 				<td>page</td>
-				<td><%=pageContext.getAttribute("pageAttribute") %></td>
+				<td><%=pageContext.getAttribute("sharedNameAttribute") %></td>
 			</tr>
 			<tr>
 				<td>request</td>

@@ -209,4 +209,47 @@
 	   <servlet-name>PutBeanToRequestServlet</servlet-name>
 	   <url-pattern>/chapter8/putBeanToRequest.do</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddParametersToELJSPServlet</servlet-name>
+		<servlet-class>com.example.chapter8.AddParametersToELJSPServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddParametersToELJSPServlet</servlet-name>
+		<url-pattern>/chapter8/AddParametersToELJSP.do</url-pattern>	   
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>displayELAttributesJSP</servlet-name>
+		<jsp-file>/chapter8/displayELAttributes.jsp</jsp-file>
+		<init-param>
+			<param-name>jspConfigInitParameter</param-name>
+			<param-value>JSP Servlet EL Config Parameter</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>displayELAttributesJSP</servlet-name>
+		<url-pattern>/chapter8/displayELAttributes.jsp</url-pattern>	   
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddParametersToELBracketsJSPServlet</servlet-name>
+		<servlet-class>com.example.chapter8.AddParametersToELBracketsJSPServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddParametersToELJSPServlet</servlet-name>
+		<url-pattern>/chapter8/AddParametersToELBracketsJSP.do</url-pattern>	   
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>displayELBracketsAttributesJSP</servlet-name>
+		<jsp-file>/chapter8/displayELBracketsAttributes.jsp</jsp-file>
+		<init-param>
+			<param-name>jspConfigInitParameter</param-name>
+			<param-value>JSP Servlet EL Brackets Config Parameter</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>displayELBracketsAttributesJSP</servlet-name>
+		<url-pattern>/chapter8/displayELBracketsAttributes.jsp</url-pattern>	   
+	</servlet-mapping>
+	
 </web-app>
