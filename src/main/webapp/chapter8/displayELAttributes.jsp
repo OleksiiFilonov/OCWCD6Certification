@@ -86,5 +86,7 @@
 
     paramValues: ${paramValues.requestParameter[0]}<br/>
     headerValues: ${headerValues.Accept[0]} <br/>
+    If sends hobbies=one&hobbies=two <br/>
+    paramValues.hobbies[0]-paramValues.hobbies[1] = ${paramValues.hobbies[0]}-${paramValues.hobbies[1]} 
 </body>
 </html>
