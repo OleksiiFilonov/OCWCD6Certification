@@ -56,7 +56,9 @@
 	
 	<h1>empty</h1>
 	EMPTY null: ${empty null } <br/>
-	NOT EMPTY noSuchValue ${!empty noSuchValue} <br/>
-	EMPTY blVar ${empty blVar} <br/>
+	NOT EMPTY noSuchValue: ${!empty noSuchValue} <br/>
+	EMPTY blVar: ${empty blVar} <br/>
+	EMPTY "" string: ${empty ""} <br/>
+	EMPTY "   " three space string: ${empty ""} <br/>
 </body>
 </html>
