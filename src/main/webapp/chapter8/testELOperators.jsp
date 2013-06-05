@@ -8,10 +8,13 @@
 	<h1>Arithmetic</h1>
 	Addition strings "2" + "3":  ${"2" + "3"} <br/>
 	Addition integers 2+3:  ${2+3} <br/>
+	Addition 2 + noSuchValue:  ${2+noSuchValue} <br/>
 	Addition string + integer :  ${"2"+3} <br/>
 	Substruction "2" - 3: ${"2" - 3} <br/>
+	Substruction "11" - noSuchValue: ${"11" - noSuchValue} <br/>
 	Division string/zero - get infinity: ${"2" / 0} <br/>
 	Division "5" div "3": ${"5" div "3"} <br/>
+	Division "5" div noSuchValue: ${"5" div noSuchValue} <br/>
 	Remainder(you can't use remainder to zero) 8 % 3: ${8 % 3}<br/>
 	Remainder(you can't use remainder to zero) "10" mod "5": ${"10" mod "5"} <br/>
 	
@@ -35,8 +38,10 @@
 	<h1>Relational</h1>
 	Equals "1" == "2" ${"1" == "2"}<br/>
 	Equals "test" eq "test" ${"test" eq "test"}<br/>
+	Equals false == noSuchValue ${false == noSuchValue}<br/>
+	Not Equals true != noSuchValue ${true != noSuchValue}<br/>
 	Not Equals "1" != "2" ${"1" != "2"}<br/>
-	Equals "test" ne "test" ${"test" ne "test"}<br/>
+	Not Equals "test" ne "test" ${"test" ne "test"}<br/>
 	Less than "1" < "2" ${"1" < "2"}<br/>
 	Less "test" lt "test" ${"test" lt "test"}<br/>
 	Less "test1" lt "test" ${"test1" lt "test"}<br/>
