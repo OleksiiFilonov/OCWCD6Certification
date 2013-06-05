@@ -16,5 +16,6 @@
 	
 	Addition:  ${test:add(2,3)} <br/>
 	Multiplication: ${test:multy(operands)}<br/>
+	Side Effect: ${test:sideEffect()}<br/>
 </body>
 </html>

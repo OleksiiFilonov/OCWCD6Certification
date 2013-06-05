@@ -15,4 +15,10 @@
 		<function-class>com.example.chapter8.ELFunctions</function-class>
 		<function-signature>int multiplication(java.util.List)</function-signature>
 	</function>
+
+	<function>
+		<name>sideEffect</name>
+		<function-class>com.example.chapter8.ELFunctions</function-class>
+		<function-signature>void sideEffect()</function-signature>
+	</function>
 </taglib>
