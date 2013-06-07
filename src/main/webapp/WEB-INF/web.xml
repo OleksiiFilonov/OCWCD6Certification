@@ -251,5 +251,14 @@
 		<servlet-name>displayELBracketsAttributesJSP</servlet-name>
 		<url-pattern>/chapter8/displayELBracketsAttributes.jsp</url-pattern>	   
 	</servlet-mapping>
+	<!-- Chapter 9 -->
+	<servlet>
+		<servlet-name>testJSTL</servlet-name>
+		<servlet-class>com.example.chapter9.TestJSTLServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testJSTL</servlet-name>
+		<url-pattern>/chapter9/testJSTL.do</url-pattern>
+	</servlet-mapping>
 	
 </web-app>

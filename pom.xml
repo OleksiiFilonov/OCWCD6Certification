@@ -29,6 +29,16 @@
 			<artifactId>jetty-webapp</artifactId>
 			<version>9.0.3.v20130506</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
 	</dependencies>
 	<properties>
 		<skipTests>true</skipTests>
