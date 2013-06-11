@@ -198,6 +198,11 @@
 			<url-pattern>/chapter7jsp/ELIgnored/*</url-pattern>
 			<el-ignored>true</el-ignored>
 		</jsp-property-group>
+		<!-- taglib from Chapter 9 -->
+        <taglib>
+           <taglib-uri>mapAnotherDummyURI</taglib-uri>
+           <taglib-location>/chapter9/taglibDummyTag.tld</taglib-location>
+       </taglib>		
 	</jsp-config>
 	
 	<!-- Chapter 8 -->
