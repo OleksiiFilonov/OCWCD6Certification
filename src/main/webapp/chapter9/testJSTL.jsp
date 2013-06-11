@@ -5,6 +5,12 @@
 	Encoded argument: <c:out value="${attributeToEncode}"/> - by default it is true <br/>
 	Not Encoded argument: <c:out value="${attributeToEncode}" escapeXml="false"/> <br/>
 	Default value <c:out value="${param.NoSuchParameters}">This is default value</c:out> <br/>
+	<b>c:url makes encoding and rewriting(add JSESSION Id) by default</b>
+	<c:url value="/someLink.html" var="encodedLink">
+	   <c:param name="attribute" value="${attributeToEncode}"/>
+	</c:url>
+	Here is encoded link "${encodedLink}"<br/>
+	
 	The whole for each:
 	<table>
 		<c:forEach items="${array}" var="element" varStatus="iterator">
