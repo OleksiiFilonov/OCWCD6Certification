@@ -1,0 +1,45 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <uri>simpleTagSupportBodies</uri>
+    
+    <tag>
+        <name>emptyBody</name>
+        <tag-class>com.example.chapter10.EmptyBodyTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>testAttribute</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>jspBody</name>
+        <tag-class>com.example.chapter10.ScriptlessBodyTag</tag-class>
+        <!-- <body-content>JSP</body-content> SimpleTag can't have JSP content body-->
+        <body-content>scriptless</body-content>
+    </tag>
+    
+    <tag>
+        <name>iterateBody</name>
+        <tag-class>com.example.chapter10.ScriptlessIterateBodyTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>collection</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>elementName</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>tagdependentBody</name>
+        <tag-class>com.example.chapter10.TagdependentBodyTag</tag-class>
+        <body-content>tagdependent</body-content>
+    </tag>
+    
+</taglib>
