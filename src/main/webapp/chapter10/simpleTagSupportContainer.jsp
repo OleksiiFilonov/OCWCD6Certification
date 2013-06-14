@@ -18,5 +18,12 @@
     <simple:tagdependentBody>
         It doesn't matter what parameters goest inside this body ${books} and ${param.test} 
     </simple:tagdependentBody>
+    
+    <jsp:include page="throwExceptionPage.jsp"/>
+    You will see this text
+    <simple:skipPageException throwException="true">
+        We will see this text inside body because it is invoked before exception<br/>
+    </simple:skipPageException>
+    You will never see that text while throwException="true"
 </body>
 </html>

@@ -42,4 +42,22 @@
         <body-content>tagdependent</body-content>
     </tag>
     
+    <tag>
+        <name>skipPageException</name>
+        <tag-class>com.example.chapter10.SkipPageExceptionTag</tag-class>
+        <body-content>scriptless</body-content>
+        
+        <attribute>
+            <name>uselessAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <name>throwException</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    
 </taglib>
