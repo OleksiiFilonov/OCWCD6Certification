@@ -15,6 +15,7 @@
     <simple:iterateBody collection="${books}" elementName="iterationElement">
         ${param.test} print: <b>"${iterationElement}"</b>
     </simple:iterateBody>
+    The last iterationElement tag="${iterationElement}" if you don't want to see it you have to remove it from scope<br/>
     <simple:tagdependentBody>
         It doesn't matter what parameters goest inside this body ${books} and ${param.test} 
     </simple:tagdependentBody>
