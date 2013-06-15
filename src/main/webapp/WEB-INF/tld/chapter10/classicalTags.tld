@@ -1,0 +1,28 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <uri>classicalTags</uri>
+    
+    <tag>
+        <name>table</name>
+        <description>Table Tag Handler</description>
+        <tag-class>com.example.chapter10.ClassicalTagSupportTableIterationHandler</tag-class>
+        <body-content>JSP</body-content>
+        
+        <attribute>
+            <name>element</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>options</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>border</name>
+        </attribute>
+    </tag>
+    
+    
+</taglib>
