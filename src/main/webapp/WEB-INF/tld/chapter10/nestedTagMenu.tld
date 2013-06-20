@@ -1,0 +1,29 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <uri>nedtedTagMenuUri</uri>
+    
+    <tag>
+        <name>menuItem</name>
+        <tag-class>com.example.chapter10.nested.MenuItem</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>menuItem</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>menuFirstLevel</name>
+        <tag-class>com.example.chapter10.nested.MenuFirstLevel</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    
+    <tag>
+        <name>MenuSecondLevel</name>
+        <tag-class>com.example.chapter10.nested.MenuSecondLevel</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    
+</taglib>
