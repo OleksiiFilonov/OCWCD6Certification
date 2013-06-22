@@ -280,5 +280,31 @@
 	   <exception-type>java.lang.NullPointerException</exception-type>
 	   <location>/chapter9/nullPointerErrorPage.jsp</location>
 	</error-page>
+	<!-- Chapter 11 -->
 	
+	<servlet>
+	   <servlet-name>ExactMapping</servlet-name>
+	   <servlet-class>com.example.chapter11.ExactMappingServlet</servlet-class>
+	</servlet>
+	<servlet>
+	   <servlet-name>DirectoryMapping</servlet-name>
+	   <servlet-class>com.example.chapter11.DirectoryMappingServlet</servlet-class>
+	</servlet>
+	<servlet>
+	   <servlet-name>ExtensionMapping</servlet-name>
+	   <servlet-class>com.example.chapter11.ExtensionMappingServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ExactMapping</servlet-name>
+	   <url-pattern>/chapter11/exactMapping</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	   <servlet-name>DirectoryMapping</servlet-name>
+	   <url-pattern>/chapter11/exactMapping/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	   <servlet-name>ExtensionMapping</servlet-name>
+	   <url-pattern>*.mapping</url-pattern>
+	</servlet-mapping>
 </web-app>
