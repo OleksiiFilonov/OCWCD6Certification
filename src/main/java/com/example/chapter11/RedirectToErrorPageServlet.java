@@ -1,29 +1,22 @@
 package com.example.chapter11;
 
-import static java.lang.System.out;
-
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ExactMappingServlet extends HttpServlet {
+public class RedirectToErrorPageServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public void init() {
-		out.println("Load " + ExactMappingServlet.class.getName());
-	}
-
-	@Override
 	public void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-		final PrintWriter out = response.getWriter();
-		out.println("<html><body>");
-		out.println("<h1>Exact mapping</h1>");
-		out.println("</body></html>");
+		if (request.getParameter("exception") == null) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+		} else {
+			throw new CaughtTestException("catch this exception with special error page");
+		}
 	}
 
 }

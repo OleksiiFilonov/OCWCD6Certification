@@ -285,10 +285,12 @@
 	<servlet>
 	   <servlet-name>ExactMapping</servlet-name>
 	   <servlet-class>com.example.chapter11.ExactMappingServlet</servlet-class>
+	   <load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet>
 	   <servlet-name>DirectoryMapping</servlet-name>
 	   <servlet-class>com.example.chapter11.DirectoryMappingServlet</servlet-class>
+	   <load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet>
 	   <servlet-name>ExtensionMapping</servlet-name>
@@ -313,4 +315,24 @@
 	   <welcome-file>index.jsp</welcome-file>
 	   <welcome-file>inanycase.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<servlet>
+	   <servlet-name>RedirectToErrorPage</servlet-name>
+	   <servlet-class>com.example.chapter11.RedirectToErrorPageServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>RedirectToErrorPage</servlet-name>
+	   <url-pattern>/chapter11/redirectToErrorPage.do</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+	   <error-code>403</error-code>
+	   <location>/chapter11/forbidden.html</location>
+	</error-page>
+	
+	<error-page>
+	   <exception-type>com.example.chapter11.CaughtTestException</exception-type>
+	   <location>/chapter11/caughtTestException.jsp</location>
+	</error-page>
 </web-app>
