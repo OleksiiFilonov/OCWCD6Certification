@@ -335,4 +335,32 @@
 	   <exception-type>com.example.chapter11.CaughtTestException</exception-type>
 	   <location>/chapter11/caughtTestException.jsp</location>
 	</error-page>
+<!-- 	
+	<ejb-local-ref>
+	   <ejb-ref-name>some/EjbLocalName</ejb-ref-name>
+	   <ejb-ref-type>Entity</ejb-ref-type>
+	   <local-home>some.local.bean.CustomerHome</local-home>
+	   <local>some.local.bean.Home</local>
+	</ejb-local-ref>
+	
+	<ejb-ref>
+	   <ejb-ref-nam>some/EjbRemoteName</ejb-ref-nam>
+	   <ejb-ref-type>Session</ejb-ref-type>
+	   <home>some.remote.bean.CustomerHome</home>
+	   <remote>some.remote.bean.Home</remote>
+	</ejb-ref>
+ -->
+    <servlet>
+        <servlet-name>JNDIEnvEntryOverview</servlet-name>
+        <servlet-class>com.example.chapter11.JNDIEnvEntryOverviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JNDIEnvEntryOverview</servlet-name>
+        <url-pattern>/chapter11/JNDIEnvEntryOverview.do</url-pattern>
+    </servlet-mapping>
+    <env-entry>
+        <env-entry-name>enventry/someName</env-entry-name>
+        <env-entry-type>java.lang.Long</env-entry-type>
+        <env-entry-value>7777777777</env-entry-value>
+    </env-entry>
 </web-app>
