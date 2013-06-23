@@ -363,4 +363,17 @@
         <env-entry-type>java.lang.Long</env-entry-type>
         <env-entry-value>7777777777</env-entry-value>
     </env-entry>
+    
+    <servlet>
+        <servlet-name>HourseImage</servlet-name>
+        <servlet-class>com.example.chapter11.HourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HourseImage</servlet-name>
+        <url-pattern>/chapter11/hourseImage.image</url-pattern>
+    </servlet-mapping>
+    <mime-mapping>
+        <extension>image</extension>
+        <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
 </web-app>
