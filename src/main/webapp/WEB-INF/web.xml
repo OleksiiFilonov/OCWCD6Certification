@@ -376,4 +376,13 @@
         <extension>image</extension>
         <mime-type>image/jpeg</mime-type>
     </mime-mapping>
+    
+    <servlet>
+        <servlet-name>DisplayUploadedFile</servlet-name>
+        <servlet-class>com.example.chapter11.DisplayUploadedFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayUploadedFile</servlet-name>
+        <url-pattern>/chapter11/DisplayUploadedFile.do</url-pattern>
+    </servlet-mapping>
 </web-app>
