@@ -385,4 +385,23 @@
         <servlet-name>DisplayUploadedFile</servlet-name>
         <url-pattern>/chapter11/DisplayUploadedFile.do</url-pattern>
     </servlet-mapping>
+    
+    <!-- Chapter 12. Security -->
+    
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+    
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Member Access Page</web-resource-name>
+			<url-pattern>/chapter12/memberAccessPage.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+		  <role-name>member</role-name>
+		</auth-constraint>
+	</security-constraint>
+    
 </web-app>
