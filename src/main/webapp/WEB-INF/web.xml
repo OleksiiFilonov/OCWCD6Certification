@@ -451,5 +451,28 @@
 	       </auth-constraint> 
 	       then everybody can access this page -->
 	</security-constraint>
+	
+	<servlet>
+	   <servlet-name>ProgramaticSecurity</servlet-name>
+	   <servlet-class>com.example.chapter11.ProgramaticSecurityServlet</servlet-class>
+	   <security-role-ref>
+	       <role-name>AdminServlet</role-name>
+	       <role-link>admin</role-link>
+	   </security-role-ref>
+	   <security-role-ref>
+	       <role-name>MemberServlet</role-name>
+	       <role-link>member</role-link>
+	   </security-role-ref>
+	   <security-role-ref>
+	       <role-name>GuestServlet</role-name>
+	       <role-link>guest</role-link>
+	   </security-role-ref>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>ProgramaticSecurity</servlet-name>
+	   <url-pattern>/chapter12/ProgramaticSecurity.do</url-pattern>
+	</servlet-mapping>
+	
     
 </web-app>
