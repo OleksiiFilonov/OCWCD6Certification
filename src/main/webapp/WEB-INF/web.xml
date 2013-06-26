@@ -391,6 +391,10 @@
     <login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
+    <security-role><role-name>guest</role-name></security-role>
+    <security-role><role-name>member</role-name></security-role>
+    <security-role><role-name>admin</role-name></security-role>
+    <security-role><role-name>superadmin</role-name></security-role>
     
 	<security-constraint>
 		<web-resource-collection>
@@ -402,6 +406,50 @@
 		<auth-constraint>
 		  <role-name>member</role-name>
 		</auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+	   <web-resource-collection>
+           <web-resource-name>Guest And Member Access Page</web-resource-name>
+           <url-pattern>/chapter12/guestAccessPage.jsp</url-pattern>
+           <url-pattern>/chapter12/memberAccessPage.jsp</url-pattern>
+           <http-method>GET</http-method>
+	   </web-resource-collection>
+       <auth-constraint>
+           <role-name>guest</role-name>
+           <role-name>member</role-name>
+       </auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+	   <web-resource-collection>
+	       <web-resource-name>Admin Access Page</web-resource-name>
+	       <url-pattern>/chapter12/adminAccessPage.jsp</url-pattern>
+	       <!-- I don't specify http-method, so all http methods will be constrained -->
+	   </web-resource-collection>
+	   <auth-constraint>
+	       <role-name>admin</role-name>
+	   </auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+	   <web-resource-collection>
+	       <web-resource-name>Nobody Access Page</web-resource-name>
+	       <url-pattern>/chapter12/nobodyAccessPage.jsp</url-pattern>
+	   </web-resource-collection>
+	   <auth-constraint/>
+	</security-constraint>
+	
+	<security-constraint>
+	   <web-resource-collection>
+	       <web-resource-name>Everybody Access Page</web-resource-name>
+	       <url-pattern>/chapter12/everybodyAccessPage.jsp</url-pattern>
+	   </web-resource-collection>
+	       <!-- If the <auth-constraint element is not specified or it is
+	       <auth-constraint>
+	           <role-name>*</role-name>
+	       </auth-constraint> 
+	       then everybody can access this page -->
 	</security-constraint>
     
 </web-app>
