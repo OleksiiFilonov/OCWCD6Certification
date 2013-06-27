@@ -388,9 +388,28 @@
     
     <!-- Chapter 12. Security -->
     
-    <login-config>
+<!--     <login-config>
         <auth-method>BASIC</auth-method>
     </login-config>
+ -->
+ 
+<!--     <login-config>
+        <auth-method>DIGEST</auth-method>
+    </login-config> -->
+    
+<!--     <login-config>
+        <auth-method>CLIENT-CERT</auth-method>
+    </login-config> -->
+
+    
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/chapter12/login.html</form-login-page>
+            <form-error-page>/chapter12/loginError.html</form-error-page>
+        </form-login-config>
+    </login-config>
+         
     <security-role><role-name>guest</role-name></security-role>
     <security-role><role-name>member</role-name></security-role>
     <security-role><role-name>admin</role-name></security-role>
