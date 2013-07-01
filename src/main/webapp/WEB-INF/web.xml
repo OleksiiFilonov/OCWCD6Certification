@@ -499,5 +499,20 @@
 	   <url-pattern>/chapter12/ProgramaticSecurity.do</url-pattern>
 	</servlet-mapping>
 	
-    
+	<!-- Chapter 13 -->
+	<filter>
+	   <filter-name>InterceptErrorFilter</filter-name>
+	   <filter-class>com.example.chapter13.InterceptErrorFilter</filter-class>
+	   <init-param>
+	       <param-name>initParam</param-name>
+	       <param-value>initialized value</param-value>
+	   </init-param>
+	</filter>
+	
+	<filter-mapping>
+	   <filter-name>InterceptErrorFilter</filter-name>
+	   <url-pattern>/chapter11/forbidden.html</url-pattern>
+	   <dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+	
 </web-app>
