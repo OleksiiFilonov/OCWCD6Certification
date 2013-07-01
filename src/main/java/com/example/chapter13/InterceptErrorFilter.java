@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletRequest;
 
 public class InterceptErrorFilter implements Filter {
 
-	private FilterConfig filterConfig;
+	private FilterConfig filterConf;
 
 	private String someInitParam;
 
 	@Override
 	public void init(final FilterConfig filterConfig) throws ServletException {
-		this.filterConfig = filterConfig;
-		someInitParam = filterConfig.getInitParameter("initParam");
+		filterConf = filterConfig;
+		someInitParam = filterConf.getInitParameter("initParam");
 		getGlobal().log(
 				Level.INFO,
 				InterceptErrorFilter.class.getCanonicalName() + " filter is initialized with parameter "
