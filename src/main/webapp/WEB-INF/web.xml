@@ -537,4 +537,14 @@
 	   <dispatcher>INCLUDE</dispatcher>
 	</filter-mapping>
 	
+	<filter>
+	   <filter-name>CompressionFilter</filter-name>
+	   <filter-class>com.example.chapter13.compression.CompressionFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	   <filter-name>CompressionFilter</filter-name>
+	   <servlet-name>DisplayUploadedFile</servlet-name>
+	</filter-mapping>
+	
 </web-app>
