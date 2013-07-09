@@ -1,6 +1,6 @@
 package com.example.chapter6;
 
-import static com.example.chapter6.AddCookiesSessionServlet.TEST_LISTENER_ATTRIBUTE;
+import static com.example.chapter6.AddSessionAttributeServlet.TEST_LISTENER_ATTRIBUTE;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +19,7 @@ public class RemoveCookiesSessionServlet extends HttpServlet {
         response.setContentType("text/html");
         final PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("TestListenerAttribute has been replaced");
+        out.println("TestListenerAttribute has been removed");
         final HttpSession session = request.getSession();
         session.removeAttribute(TEST_LISTENER_ATTRIBUTE);
         out.println("</html></body>");

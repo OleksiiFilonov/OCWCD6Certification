@@ -9,12 +9,21 @@
 	</session-config>
 
 	<servlet>
-		<servlet-name>AddCookiesSessionServlet</servlet-name>
-		<servlet-class>com.example.chapter6.AddCookiesSessionServlet</servlet-class>
+		<servlet-name>AddSessionAttributeServlet</servlet-name>
+		<servlet-class>com.example.chapter6.AddSessionAttributeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>AddCookiesSessionServlet</servlet-name>
-		<url-pattern>/addCookiesSession.do</url-pattern>
+		<servlet-name>AddSessionAttributeServlet</servlet-name>
+		<url-pattern>/addSessionAttribute.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddCookieServlet</servlet-name>
+		<servlet-class>com.example.chapter6.AddCookieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCookieServlet</servlet-name>
+		<url-pattern>/addCookieServlet.do</url-pattern>
 	</servlet-mapping>
 
 	<servlet>

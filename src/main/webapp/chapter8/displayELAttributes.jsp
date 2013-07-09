@@ -81,6 +81,16 @@
             </tr>
         </tbody>
     </table><br/>
+    <h2>Cookies are added to the response will appear in the request in a new request
+    In EL Cookie is an object cookie.someCookieName returns object</h2>
+    just to see cookie object cookie.cookieName - ${cookie.cookieName}<br/>
+    just to see cookie cookie.cookieName.value - ${cookie.cookieName.value}<br/>
+    just to see cookie cookie.cookieName.maxAge - ${cookie.cookieName.maxAge}<br/>
+    just to see cookie cookie.cookieName.path - ${cookie.cookieName.path}<br/>
+    just to see cookie cookie.cookieName.domain - ${cookie.cookieName.domain}<br/>
+    just to see cookie cookie.cookieName.secure - ${cookie.cookieName.secure}<br/>
+    just to see cookie cookie.cookieName.httpOnly - ${cookie.cookieName.httpOnly}<br/>
+    
     Cookie: ${cookie.JSESSIONID.value}<br/>
     Header: ${header.host} <br/>
 
