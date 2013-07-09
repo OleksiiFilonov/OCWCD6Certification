@@ -41,7 +41,7 @@
         <tbody>
             <tr>
                 <td>page</td>
-                <td>${pageScope.sharedNameAttribute}</td>
+                <td>${sharedNameAttribute}</td>
             </tr>
             <tr>
                 <td>request</td>
@@ -81,7 +81,8 @@
             </tr>
         </tbody>
     </table><br/>
-    <h2>Cookies are added to the response will appear in the request in a new request
+    <h2>Cookies are added to the response will appear in the request in a new request,
+    because EL cookies are a request cookies,
     In EL Cookie is an object cookie.someCookieName returns object</h2>
     just to see cookie object cookie.cookieName - ${cookie.cookieName}<br/>
     just to see cookie cookie.cookieName.value - ${cookie.cookieName.value}<br/>
@@ -91,12 +92,21 @@
     just to see cookie cookie.cookieName.secure - ${cookie.cookieName.secure}<br/>
     just to see cookie cookie.cookieName.httpOnly - ${cookie.cookieName.httpOnly}<br/>
     
+    <h2>Test Header and header values. In EL header and headerValues are inside a request, so if you add any header to response you won't see them</h2><br/>
+    header['headerNameSingle'] = "${header['headerNameSingle']}"<br/>
+    header.headerName = "${header.headerName}"<br/>
+    headerValues.headerName = "${headerValues.headerName}"<br/>
+    headerValues.headerName[0] = "${headerValues.headerName[0]}"<br/>
+    
     Cookie: ${cookie.JSESSIONID.value}<br/>
-    Header: ${header.host} <br/>
+    header.host: ${header.host} <br/>
+    header["User-Agent"]: ${header["User-Agent"]} <br/>
+    header.User-Agent: ${header.User-Agent} <br/>
 
     paramValues: ${paramValues.requestParameter[0]}<br/>
     headerValues: ${headerValues.Accept[0]} <br/>
     If sends hobbies=one&hobbies=two <br/>
+    paramValues.hobbies = "${param.hobbies}"<br/>
     paramValues.hobbies[0]-paramValues.hobbies[1] = ${paramValues.hobbies[0]}-${paramValues.hobbies[1]} 
 </body>
 </html>

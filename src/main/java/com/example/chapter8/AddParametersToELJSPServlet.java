@@ -28,6 +28,13 @@ public class AddParametersToELJSPServlet extends HttpServlet {
         addedCookie.setDomain("someDomain");
         addedCookie.setPath("/uknownpath");
         response.addCookie(addedCookie);
+
+        response.setHeader("headerNameSingle", "headerNameSingleValue");
+        response.setHeader("headerName", "headerValue1");
+        response.setHeader("headerName", "headerValue2");
+        response.addHeader("headerName", "headerValue3");
+        response.addHeader("headerName", "headerValue4");
+
         request.getRequestDispatcher("/chapter8/displayELAttributes.jsp?requestParameter=RequestParameter").forward(
                 request, response);
     }
