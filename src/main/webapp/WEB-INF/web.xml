@@ -5,7 +5,7 @@
 	<display-name>Archetype Created Web Application</display-name>
 
 	<session-config>
-		<session-timeout>1</session-timeout>
+		<session-timeout>2</session-timeout>
 	</session-config>
 
 	<servlet>
@@ -27,22 +27,22 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>ReplaceCookiesSessionServlet</servlet-name>
-		<servlet-class>com.example.chapter6.ReplaceCookiesSessionServlet</servlet-class>
+		<servlet-name>ReplaceSessionAttributeServlet</servlet-name>
+		<servlet-class>com.example.chapter6.ReplaceSessionAttributeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ReplaceCookiesSessionServlet</servlet-name>
-		<url-pattern>/replaceCookiesSession.do</url-pattern>
+		<servlet-name>ReplaceSessionAttributeServlet</servlet-name>
+		<url-pattern>/replaceSessionAttribute.do</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>RemoveCookiesSessionServlet</servlet-name>
-		<servlet-class>com.example.chapter6.RemoveCookiesSessionServlet
+		<servlet-name>RemoveSessionAttributeServlet</servlet-name>
+		<servlet-class>com.example.chapter6.RemoveSessionAttributeServlet
 		</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>RemoveCookiesSessionServlet</servlet-name>
-		<url-pattern>/removeCookiesSession.do</url-pattern>
+		<servlet-name>RemoveSessionAttributeServlet</servlet-name>
+		<url-pattern>/removeSessionAttribute.do</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -169,6 +169,10 @@
 
 	<listener>
 		<listener-class>com.example.chapter6.ExampleHttpSessionAttributeListener</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>com.example.chapter5.ExampleServletRequestListener</listener-class>
 	</listener>
 	
 	<!-- Chapter 7 -->
@@ -487,8 +491,8 @@
 	</security-constraint>
 	
 	<servlet>
-	   <servlet-name>ProgramaticSecurity</servlet-name>
-	   <servlet-class>com.example.chapter11.ProgramaticSecurityServlet</servlet-class>
+	   <servlet-name>ProgrammaticSecurity</servlet-name>
+	   <servlet-class>com.example.chapter11.ProgrammaticSecurityServlet</servlet-class>
 	   <security-role-ref>
 	       <role-name>AdminServlet</role-name>
 	       <role-link>admin</role-link>
@@ -504,8 +508,8 @@
 	</servlet>
 	
 	<servlet-mapping>
-	   <servlet-name>ProgramaticSecurity</servlet-name>
-	   <url-pattern>/chapter12/ProgramaticSecurity.do</url-pattern>
+	   <servlet-name>ProgrammaticSecurity</servlet-name>
+	   <url-pattern>/chapter12/ProgrammaticSecurity.do</url-pattern>
 	</servlet-mapping>
 	
 	<!-- Chapter 13 -->

@@ -107,6 +107,9 @@
     headerValues: ${headerValues.Accept[0]} <br/>
     If sends hobbies=one&hobbies=two <br/>
     paramValues.hobbies = "${param.hobbies}"<br/>
-    paramValues.hobbies[0]-paramValues.hobbies[1] = ${paramValues.hobbies[0]}-${paramValues.hobbies[1]} 
+    paramValues.hobbies[0]-paramValues.hobbies[1] = ${paramValues.hobbies[0]}-${paramValues.hobbies[1]}<br/>
+    <h2>initParam for <i>context</i> init parameters - not for servelt init parameters </h2><br/>
+    initParam.dbJNDIName = ${initParam.dbJNDIName}
+    
 </body>
 </html>

@@ -9,16 +9,17 @@
 	Addition strings "2" + "3":  ${"2" + "3"} <br/>
 	Addition integers 2+3:  ${2+3} <br/>
 	Addition 2 + noSuchValue:  ${2+noSuchValue} <br/>
-	Addition string + integer :  ${"2"+3} <br/>
-	Substruction "2" - 3: ${"2" - 3} <br/>
+	Addition {"2" + 3} :  ${"2"+3} <br/>
+	Substruction {"2" - 3}: ${"2" - 3} <br/>
 	Substruction "11" - noSuchValue: ${"11" - noSuchValue} <br/>
-	Division string/zero - get infinity: ${"2" / 0} <br/>
+	Division {"2"/0} - get infinity: ${"2" / 0} <br/>
 	Division "5" div "3": ${"5" div "3"} <br/>
-	Division "5" div noSuchValue: ${"5" div noSuchValue} <br/>
-	Remainder(you can't use remainder to zero) 8 % 3: ${8 % 3}<br/>
-	Remainder(you can't use remainder to zero) "10" mod "5": ${"10" mod "5"} <br/>
+	Division {"5" div noSuchValue}: ${"5" div noSuchValue} <br/>
+	Remainder(you can't use remainder to zero) {8 % 3}: ${8 % 3}<br/>
+	Remainder(you can't use remainder to zero) {"10" mod "5"}: ${"10" mod "5"} <br/>
 	
 	<h1>Logical</h1>
+	blVar=true;<br/>
 	<%	boolean blVar = true;
 		pageContext.setAttribute("blVar", blVar);
 	%>
@@ -39,6 +40,8 @@
 	Equals "1" == "2" ${"1" == "2"}<br/>
 	Equals "test" eq "test" ${"test" eq "test"}<br/>
 	Equals false == noSuchValue ${false == noSuchValue}<br/>
+	Equals null == noSuchValue ${null == noSuchValue}<br/>
+	Not Equals false != noSuchValue ${false != noSuchValue}<br/>
 	Not Equals true != noSuchValue ${true != noSuchValue}<br/>
 	Not Equals "1" != "2" ${"1" != "2"}<br/>
 	Not Equals "test" ne "test" ${"test" ne "test"}<br/>
@@ -58,12 +61,16 @@
 	Greater then or equal to "test" ge "test" ${"test" ge "test"}<br/>
 	Greater then or equal to "test1" ge "test" ${"test1" ge "test"}<br/>
 	Greater then or equal to "test" >= "test1" ${"test" >= "test1"}<br/>
+	{false <= true} :${false <= true}<br/>
+	{true < false} :${true < false}
+	<h2>you can't do +/- for strings. It is only for digits. you can't perform {"one" + "two"} - 500 error. Concatenate string just typing one by one</h2><br/>
+	<h2>there are no single logic sign operation except "!" {true & true} - 500 error</h2><br/>
 	
 	<h1>empty</h1>
 	EMPTY null: ${empty null } <br/>
 	NOT EMPTY noSuchValue: ${!empty noSuchValue} <br/>
 	EMPTY blVar: ${empty blVar} <br/>
 	EMPTY "" string: ${empty ""} <br/>
-	EMPTY "   " three space string: ${empty ""} <br/>
+	EMPTY "    " three space string: ${empty "    "} <br/>
 </body>
 </html>

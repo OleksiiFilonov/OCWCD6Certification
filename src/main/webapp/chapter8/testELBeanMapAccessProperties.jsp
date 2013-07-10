@@ -9,7 +9,7 @@
     employee.firstName = ${employee.firstName} <br/>
     employee["firstName"] = ${employee["firstName"]}<br/>
     employee.noProperty = will cause a javax.el.PropertyNotFoundException<br/>
-    employee["noProperty"] = will cause a javax.el.PropertyNotFoundException<br/>
+    employee["noProperty"] = javax.el.PropertyNotFoundException: Property 'noProperty' not found on type com.example.chapter8.Employee<br/>
     employee.firstName-LastName = try to make substraction from "First Name" - "Last Name" <br/>
 </body>
 </html>

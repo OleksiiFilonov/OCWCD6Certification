@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class ReplaceCookiesSessionServlet extends HttpServlet {
+public class RemoveSessionAttributeServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
@@ -19,9 +19,9 @@ public class ReplaceCookiesSessionServlet extends HttpServlet {
         response.setContentType("text/html");
         final PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("TestListenerAttribute has been replaced");
+        out.println("TestListenerAttribute has been removed");
         final HttpSession session = request.getSession();
-        session.setAttribute(TEST_LISTENER_ATTRIBUTE, "attribute has been replaced");
+        session.removeAttribute(TEST_LISTENER_ATTRIBUTE);
         out.println("</html></body>");
     }
 }
