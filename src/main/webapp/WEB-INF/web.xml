@@ -142,8 +142,7 @@
 
 	<servlet>
 		<servlet-name>Second Dispatcher Servlet</servlet-name>
-		<servlet-class>com.example.chapter5.SecondDispatcherServlet
-		</servlet-class>
+		<servlet-class>com.example.chapter5.SecondDispatcherServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Second Dispatcher Servlet</servlet-name>
@@ -158,6 +157,28 @@
 		<param-name>dbJNDIName</param-name>
 		<param-value>Database JNDI Value</param-value>
 	</context-param>
+	<context-param>
+		<param-name>databasePath</param-name>
+		<param-value>mem:mymemdb</param-value>
+	</context-param>
+	<context-param>
+		<param-name>databaseName</param-name>
+		<param-value>xdb</param-value>
+	</context-param>
+	
+	<servlet>
+		<servlet-name>JDBCConnectionServlet</servlet-name>
+		<servlet-class>com.example.database.JDBCConnectionServlet</servlet-class>
+		<init-param>
+			<param-name>jdbcConnectionName</param-name>
+			<param-value>jdbc:hsqldb:hsql://localhost/</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JDBCConnectionServlet</servlet-name>
+		<url-pattern>/database/JDBCConnection.do</url-pattern>
+	</servlet-mapping>
 
 	<listener>
 		<listener-class>com.example.chapter5.LogSessionListener</listener-class>
