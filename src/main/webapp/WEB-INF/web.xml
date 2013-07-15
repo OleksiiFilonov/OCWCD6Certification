@@ -1,7 +1,10 @@
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
-	version="2.4">
+<web-app    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://java.sun.com/xml/ns/javaee"
+            xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+            http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+            id="WebApp_ID" version="3.0">
+            
 	<display-name>Archetype Created Web Application</display-name>
 
 	<session-config>
@@ -155,8 +158,15 @@
 	</context-param>
 	<context-param>
 		<param-name>dbJNDIName</param-name>
-		<param-value>Database JNDI Value</param-value>
+		<param-value>jdbc/dataSource</param-value>
 	</context-param>
+	<env-entry>
+	   <env-entry-name>dbJNDIName</env-entry-name>
+	   <env-entry-value>jdbc/dataSource</env-entry-value>
+	   <env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+	
+	
 	<context-param>
 		<param-name>databasePath</param-name>
 		<param-value>mem:mymemdb</param-value>
@@ -166,20 +176,6 @@
 		<param-value>xdb</param-value>
 	</context-param>
 	
-	<servlet>
-		<servlet-name>JDBCConnectionServlet</servlet-name>
-		<servlet-class>com.example.database.JDBCConnectionServlet</servlet-class>
-		<init-param>
-			<param-name>jdbcConnectionName</param-name>
-			<param-value>jdbc:hsqldb:hsql://localhost/</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>JDBCConnectionServlet</servlet-name>
-		<url-pattern>/database/JDBCConnection.do</url-pattern>
-	</servlet-mapping>
-
 	<listener>
 		<listener-class>com.example.chapter5.LogSessionListener</listener-class>
 	</listener>
