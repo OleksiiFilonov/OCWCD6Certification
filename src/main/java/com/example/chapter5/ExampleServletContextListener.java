@@ -29,12 +29,12 @@ public class ExampleServletContextListener implements ServletContextListener {
 		final String databasePath = context.getInitParameter("databasePath");
 		startHQSLLocalDatabase(databaseName, databasePath);
 		final String dbJNDIName = context.getInitParameter("dbJNDIName");
-		/*
-		 * try { bindDataSource(databaseName, dbJNDIName); } catch (final
-		 * NamingException exc) {
-		 * LOG.severe("Can't add DatasourceConnection to JNDI context: " +
-		 * exc.getMessage()); }
-		 */
+
+		try {
+			bindDataSource(databaseName, dbJNDIName);
+		} catch (final NamingException exc) {
+			LOG.severe("Can't add DatasourceConnection to JNDI context: " + exc.getMessage());
+		}
 	}
 
 	private void bindDataSource(final String databaseName, final String dbJNDIName) throws NamingException {
@@ -42,7 +42,9 @@ public class ExampleServletContextListener implements ServletContextListener {
 		final String connectionUrl = "jdbc:hsqldb:hsql://localhost/" + databaseName;
 		ds.setDatabase(connectionUrl);
 		final Context ctx = new InitialContext();
-		ctx.bind(dbJNDIName, ds);
+		ctx.createSubcontext("jdbc");
+		ctx.bind("jdbc/dataSource", ds);
+		// ctx.bind(dbJNDIName, ds);
 	}
 
 	private void startHQSLLocalDatabase(final String databaseName, final String databasePath) {

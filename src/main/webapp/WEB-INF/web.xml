@@ -160,12 +160,12 @@
 		<param-name>dbJNDIName</param-name>
 		<param-value>jdbc/dataSource</param-value>
 	</context-param>
-	<env-entry>
+<!-- 	<env-entry>
 	   <env-entry-name>dbJNDIName</env-entry-name>
 	   <env-entry-value>jdbc/dataSource</env-entry-value>
 	   <env-entry-type>java.lang.String</env-entry-type>
 	</env-entry>
-	
+ -->	
 	
 	<context-param>
 		<param-name>databasePath</param-name>
@@ -188,14 +188,10 @@
 		<listener-class>com.example.chapter6.ExampleHttpSessionAttributeListener</listener-class>
 	</listener>
 	
-	<listener>
-		<listener-class>com.example.chapter5.ExampleServletRequestListener</listener-class>
-	</listener>
-	
 	<!-- Chapter 7 -->
 	<servlet>
-		<servlet-class>com.example.chapter7.AddParametersToJSPServlet</servlet-class>
 		<servlet-name>AddParametersToJSPServlet</servlet-name>
+		<servlet-class>com.example.chapter7.AddParametersToJSPServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AddParametersToJSPServlet</servlet-name>

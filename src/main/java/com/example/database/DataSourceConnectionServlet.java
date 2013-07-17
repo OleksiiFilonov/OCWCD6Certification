@@ -28,7 +28,8 @@ public class DataSourceConnectionServlet extends HttpServlet {
 	public void init() {
 		try {
 			final Context context = new InitialContext();
-			final DataSource ds = (DataSource) context.lookup(getServletContext().getInitParameter("dbJNDIName"));
+			final DataSource ds = (DataSource) context.lookup("java:/comp/env/"
+					+ getServletContext().getInitParameter("dbJNDIName"));
 			connection = ds.getConnection("sa", "");
 		} catch (final NamingException exc) {
 			LOG.severe("Error on initializing initial context: " + exc.getMessage());
