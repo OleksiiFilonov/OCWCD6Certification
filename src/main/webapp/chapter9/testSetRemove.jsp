@@ -27,6 +27,9 @@
         <c:set target="${testMap}" property="key" value="value"/>
         <c:set target="${testMap}" property="key1" value="value1"/>
     </c:if>
+    <br/>
+    testMap.get("key") = '${testMap.get("key")}' <br/>
+    testMap["key"] = '${testMap["key"]}'<br/>
     Now map contains ${testMap.size()} elements <br/>
     Let's itterate over them<br>
     <c:forEach var="entry" items="${testMap}">

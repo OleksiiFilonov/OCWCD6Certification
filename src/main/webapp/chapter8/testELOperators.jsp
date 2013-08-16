@@ -72,5 +72,9 @@
 	EMPTY blVar: ${empty blVar} <br/>
 	EMPTY "" string: ${empty ""} <br/>
 	EMPTY "    " three space string: ${empty "    "} <br/>
+	<br/>
+	<br/>
+	<br/>
+	{2+3 lt 20 div 0} = '${2+3 lt 20 div 0}'
 </body>
 </html>
