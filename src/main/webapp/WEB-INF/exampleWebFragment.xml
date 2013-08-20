@@ -1,0 +1,35 @@
+<example>
+	<web-app metadata-complete="true">
+		<absolute-ordering>
+			<name>moduleA</name>
+			<others /> <!-- if is not mention - doesn't scan for other jars -->
+			<name>moduleB</name>
+		</absolute-ordering>
+	</web-app>
+
+	<web-fragment>
+		<name>moduleB</name>
+		<ordering>
+			<after>
+				<others />
+				<name>moduleC</name>
+			</after>
+		</ordering>
+	</web-fragment>
+	<web-fragment>
+		<name>moduleA</name>
+		<ordering>
+			<before>
+				<others />
+			</before>
+		</ordering>
+	</web-fragment>
+	<web-fragment>
+		<name>moduleD</name>
+		<ordering>
+			<before>
+				<name>moduleB</name>
+			</before>
+		</ordering>
+	</web-fragment>
+</example>
