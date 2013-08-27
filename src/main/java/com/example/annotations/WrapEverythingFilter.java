@@ -11,7 +11,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("*")
+@WebFilter(value = "*", asyncSupported = true)
 public class WrapEverythingFilter implements Filter {
 
 	private static Logger LOG = Logger.getLogger(WrapEverythingFilter.class.getName());

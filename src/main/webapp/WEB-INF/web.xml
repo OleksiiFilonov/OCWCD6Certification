@@ -573,4 +573,20 @@
 	   <servlet-name>DisplayUploadedFile</servlet-name>
 	</filter-mapping>
 	
+	<!-- Async Support -->
+ 	<servlet>
+	   <servlet-name>AsyncTimeoutServlet</servlet-name>
+	   <servlet-class>com.example.asyncsupport.AsyncSupportServlet</servlet-class>
+	   <async-supported>true</async-supported>
+	   <init-param>
+	       <param-name>timeout</param-name>
+	       <param-value>7000</param-value>
+	   </init-param>
+	</servlet>
+	
+	<servlet-mapping>
+	   <servlet-name>AsyncTimeoutServlet</servlet-name>
+	   <url-pattern>/asyncTimeoutServlet</url-pattern>
+	</servlet-mapping>
+
 </web-app>
