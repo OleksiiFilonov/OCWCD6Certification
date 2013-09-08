@@ -103,8 +103,11 @@
     header["User-Agent"]: ${header["User-Agent"]} <br/>
     header.User-Agent: ${header.User-Agent} <br/>
 
-    paramValues: ${paramValues.requestParameter[0]}<br/>
-    headerValues: ${headerValues.Accept[0]} <br/>
+    paramValues.requestParameter[0]: ${paramValues.requestParameter[0]}<br/>
+    header["Accept"]: ${header["Accept"]} <br/>
+    header.Accept: ${header.Accept} <br/>
+    headerValues.Accept[0]: ${headerValues.Accept[0]} <br/>
+    headerValues.Accept[1]: ${headerValues.Accept[1]} <br/>
     If sends hobbies=one&hobbies=two <br/>
     paramValues.hobbies = "${param.hobbies}"<br/>
     paramValues.hobbies[0]-paramValues.hobbies[1] = ${paramValues.hobbies[0]}-${paramValues.hobbies[1]}<br/>
