@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "AsyncSupportServlet", asyncSupported = true, value = "/asyncServlet", initParams = { @WebInitParam(name = "timeout", value = "15000") })
+@WebServlet(name = "AsyncSupportServlet", asyncSupported = true, value = "/asyncServlet", initParams = { @WebInitParam(name = "timeout", value = "20000") })
 public class AsyncSupportServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

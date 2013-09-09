@@ -16,12 +16,6 @@ public class AsyncListenerLogger implements AsyncListener {
 		logger.info("Async handle completed for request URI: " + getRequestURI(event));
 	}
 
-	private String getRequestURI(final AsyncEvent event) {
-		final HttpServletRequest httpReq = (HttpServletRequest) event.getSuppliedRequest();
-		final String requestURI = (httpReq == null) ? "" : httpReq.getRequestURI();
-		return requestURI;
-	}
-
 	@Override
 	public void onTimeout(final AsyncEvent event) throws IOException {
 		logger.info("Async handling timeout for request URI: " + getRequestURI(event));
@@ -36,6 +30,12 @@ public class AsyncListenerLogger implements AsyncListener {
 	@Override
 	public void onStartAsync(final AsyncEvent event) throws IOException {
 		logger.info("Async handling was started for request URI: " + getRequestURI(event));
+	}
+
+	private String getRequestURI(final AsyncEvent event) {
+		final HttpServletRequest httpReq = (HttpServletRequest) event.getSuppliedRequest();
+		final String requestURI = (httpReq == null) ? "" : httpReq.getRequestURI();
+		return requestURI;
 	}
 
 }

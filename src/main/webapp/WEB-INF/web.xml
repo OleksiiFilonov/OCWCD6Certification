@@ -177,10 +177,6 @@
 	</context-param>
 	
 	<listener>
-		<listener-class>com.example.chapter5.LogSessionListener</listener-class>
-	</listener>
-
-	<listener>
 		<listener-class>com.example.chapter5.ExampleServletContextListener</listener-class>
 	</listener>
 
