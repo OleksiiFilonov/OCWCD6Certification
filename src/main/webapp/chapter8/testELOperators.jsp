@@ -23,6 +23,8 @@
 	<%	boolean blVar = true;
 		pageContext.setAttribute("blVar", blVar);
 	%>
+	AND noSuchValue and true: ${noSuchValue and true} <br/>
+	AND noSuchValue and false: ${noSuchValue and false} <br/>
 	AND noSuchValue and null: ${noSuchValue and null} <br/>
 	AND true and "one": ${true and "one"} <br/>
 	AND true && "blVar": ${true && blVar} <br/>
